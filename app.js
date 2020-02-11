@@ -1,62 +1,39 @@
 
 
-
-var seattleStore = {
-  name: 'Seattle Store',
-  minCust: 23,
-  maxCust: 65,
-  avgCookie: 6.3,
-
+function Location (name, mincust, maxcust, avgcookie) {
+  this.name = name;
+  this.mincust = mincust;
+  this.maxcust = maxcust;
+  this.avgcookie = avgcookie;
 }
 
-var tokyoStore = {
-  name: 'Tokyo Store',
-  minCust: 3,
-  maxCust: 24,
-  avgCookie: 1.2,
+var Seattle = new Location ('Seattle', 23, 65, 6.3);
 
+var Tokyo = new Location ('Tokyo', 3, 24, 1.2);
+
+var Dubai = new Location ('Dubai', 11, 38, 3.7);
+
+var Paris = new Location ('Paris', 20, 38, 2.3);
+
+var Lima = new Location ('Lima', 2, 16, 4.6);
+
+function createTableRow (text){
+  var th = document.createElement('th')
+  th.textContent = text;
+  return th;
 }
 
-var dubaiStore = {
-  name: 'Dubai Store',
-  minCust: 11,
-  maxCust: 38,
-  avgCookie: 3.7,
-
-}
-
-var parisStore = {
-  name: 'Paris Store',
-  minCust: 20,
-  maxCust: 38,
-  avgCookie: 2.3,
-}
-
-
-
-var limaStore = {
-  name: 'Lima Store',
-  minCust: 2,
-  maxCust: 16,
-  avgCookie: 4.6,
-}
-
- 
-var stores = [seattleStore, tokyoStore, dubaiStore, parisStore, limaStore];
-
-var hours = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-function calculateCookies (stores){
-  var cookiesPerHour = [];
-  for (var i = 0; i < hours.length; i++){
-    var testNumber = getRandomCut(stores.minCust, stores.maxCust);
-    var answ = Math.floor(testNumber * stores.avgCookie);
-    console.log(hours[i], "o'clock: ", answ, "cookies sold");
-
-    cookiesPerHour.push(answ);
-    console.log(cookiesPerHour);
+function appendChildren (parent, children){
+  children.array.forEach(function (child){
+    parent.appendChild((child));
+    });
   }
-  stores.cookiesPerHour = cookiesPerHour;
-}
 
-seattleStore.cookiesPerHour = calculateCookies(seattleStore);
+var getHours = document.getElementById('creatTableRow')
+
+var hours = [
+  createTableRow('6am'),
+  createTableRow('7am'),
+  createTableRow('8am'),
+]
+ appendChildren(getHours, hours);
