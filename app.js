@@ -57,12 +57,7 @@ var limaStore = {
   avgCookie: 4.6,
 
 
-function getrandomcust(min,max){
-  min = Math.ceil(min);
-  max = Math.floor(max);
 
-  return Math.floor(Math.random() * (max - min)) + min;
-}
 
 var time = [6,7,8,9,10,11,12,13,14,15,16,17,18,19];
 var testNumber =  getrandomcust(Seattle.mincust, Seattle.maxcust);
