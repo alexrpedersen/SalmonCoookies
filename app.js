@@ -69,39 +69,5 @@ function calculateCookes(){
     console.log(time[i] , " o'clock: " ,Math.floor(answ) , "cookies sold");
   }
 }
-calculateCookes();
 
-var time = [6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-var testNumber =  getrandomcust(Tokyo.mincust, Tokyo.maxcust);
-function calculateCookes(){
-  for (var i = 0; i < time.length; i++) {
-    var testNumber =  getrandomcust(Tokyo.mincust, Tokyo.maxcust);
-
-    var answ = (testNumber * Tokyo.avgcookie);
-    console.log(time[i] , " o'clock: " ,Math.floor(answ) , "cookies sold");
-  }
-}
-calculateCookes();
-
-var time = [6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-var testNumber =  getrandomcust(Dubai.mincust, Dubai.maxcust);
-function calculateCookes(){
-  for (var i = 0; i < time.length; i++) {
-    var testNumber =  getrandomcust(Dubai.mincust, Dubai.maxcust);
-
-    var answ = (testNumber * Dubai.avgcookie);
-    console.log("",time[i] , " o'clock: " ,Math.floor(answ) , "cookies sold");
-  }
-}
-calculateCookes();
-var time = [6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-var testNumber =  getrandomcust(Lima.mincust, Lima.maxcust);
-function calculateCookes(){
-  for (var i = 0; i < time.length; i++) {
-    var testNumber =  getrandomcust(Lima.mincust, Lima.maxcust);
-
-    var answ = (testNumber * Lima.avgcookie);
-    console.log("Seattle", time[i] , " o'clock: " ,Math.floor(answ) , "cookies sold");
-  }
-}
 calculateCookes();
