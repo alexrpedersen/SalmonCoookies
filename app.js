@@ -54,7 +54,7 @@ var limaStore = {
   minCust: 2,
   maxCust: 16,
   avgCookie: 4.6,
-
+}
 
  
 var stores = [seattleStore, tokyoStore, dubaiStore, parisStore, limaStore];
