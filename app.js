@@ -56,17 +56,8 @@ var limaStore = {
   avgCookie: 4.6,
 
 
+ 
+var stores = [seattleStore, tokyoStore, dubaiStore, parisStore, limaStore];
 
+var hours = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-var time = [6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-var testNumber =  getrandomcust(Seattle.mincust, Seattle.maxcust);
-function calculateCookes(){
-  for (var i = 0; i < time.length; i++) {
-    var testNumber =  getrandomcust(Seattle.mincust, Seattle.maxcust);
-
-    var answ = (testNumber * Seattle.avgcookie);
-    console.log(time[i] , " o'clock: " ,Math.floor(answ) , "cookies sold");
-  }
-}
-
-calculateCookes();
