@@ -6,11 +6,7 @@ var seattleStore = {
   minCust: 23,
   maxCust: 65,
   avgCookie: 6.3,
- 
 
-randomCust: function() {
-  Math.floor((Math.random() * 65) + 1)
-  }
 }
 
 var tokyoStore = {
@@ -19,10 +15,6 @@ var tokyoStore = {
   maxCust: 24,
   avgCookie: 1.2,
 
-
-randomCust: function() {
-  Math.floor((Math.random() * 24) + 1)
-  } 
 }
 
 var dubaiStore = {
@@ -31,10 +23,6 @@ var dubaiStore = {
   maxCust: 38,
   avgCookie: 3.7,
 
-
-randomCust: function() {
-  Math.floor((Math.random() * 38) + 1)
-  }
 }
 
 var parisStore = {
@@ -42,12 +30,9 @@ var parisStore = {
   minCust: 20,
   maxCust: 38,
   avgCookie: 2.3,
-
-
-randomCust: function() {
-  Math.floor((Math.random() * 38) + 1)
-  }
 }
+
+
 
 var limaStore = {
   name: 'Lima Store',
@@ -61,3 +46,17 @@ var stores = [seattleStore, tokyoStore, dubaiStore, parisStore, limaStore];
 
 var hours = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+function calculateCookies (stores){
+  var cookiesPerHour = [];
+  for (var i = 0; i < hours.length; i++){
+    var testNumber = getRandomCut(stores.minCust, stores.maxCust);
+    var answ = Math.floor(testNumber * stores.avgCookie);
+    console.log(hours[i], "o'clock: ", answ, "cookies sold");
+
+    cookiesPerHour.push(answ);
+    console.log(cookiesPerHour);
+  }
+  stores.cookiesPerHour = cookiesPerHour;
+}
+
+seattleStore.cookiesPerHour = calculateCookies(seattleStore);
