@@ -37,3 +37,23 @@ var hours = [
   createTableRow('8am'),
 ]
  appendChildren(getHours, hours);
+
+ var getLocations = document.getElementById('creatTableRow')
+
+var locations = [
+  createTableRow('Seattle'),
+  createTableRow('Tokyo'),
+  createTableRow('Dubai'),
+  createTableRow('Paris'),
+  createTableRow('Lima'),
+]
+ appendChildren(getLocations, locations);
+
+ var getcustomers = document.getElementById('creatTableRow')
+
+var customers = [
+  createTableRow('Max Customers'),
+  createTableRow('Min Customers'),
+  createTableRow('Avg Customers'),
+]
+ appendChildren(getcustomers, customers);
