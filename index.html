@@ -1,37 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Salmon Cookies</title>
 </head>
+
 <body>
- <table style="width: 100%;">
-  <tbody id="tableBody">
-    <tr>
-      <th id="createTableRow"></th>
-      <th></th>
-      <th></th>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-  
+    
+    <section>
+        <header>
+            <h2>Salmon Cookies</h2>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>Store</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <header>
+            <h2>Complete the form to add your new store!</h2>
+        </header>
+        <form method="post" id="myForm">
+            <fieldset>
+                <label for="location">Store location:* </label>
+                <input type="text" name="location" required="required" />
+                <label for="location">Minimum Customers:* </label>
+                <input type="number" name="min" required="required" maxlength="4" />
+                <label for="location">Maximum Customers:* </label>
+                <input type="number" name="max" required="required" maxlength="4" />
+                <label for="location">Average Cookie Sales:* </label>
+                <input type="number" name="avgSale" required="required" maxlength="4" />
+                <input type="button" value="Submit New Store Data" onclick="evaluateForm(this.form)" />
+            </fieldset>
+        </form>
+        <p class="small">Please fill in all boxes.
+        </p>
+        <br />
+        <br />
+    </section>
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
+
 </html>
